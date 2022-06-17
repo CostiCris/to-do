@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    margin-top: 85px;
+    color: #393939;
+}
+
+
+/* INPUT */
+.input__div {
+    display: flex;
+    width: 68%;
+    margin: 120px auto 25px;
+}
+
+#input {
+    height: 36px;
+    width: 460px;
+    border: 2px solid #5998F6;
+    border-radius: 8px;
+}
+
+.btn__add, .btn__clear {
+    margin-left: 30px;
+    font-size: 24px;
+    text-align: center;
+    border-style: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn__add {
+    background-color: #5998F6;
+}
+
+.btn__clear {
+    background-color: #F67659;
+}
+
+.separator {
+    border: 1px solid #5998F6;
+    width: 68%;
+    margin: 0 auto;
+}
+
+/* Items List */
+.taskList {
+    width: 64%;
+    margin: 0 auto;
+}
+
+.taskList__ul {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskList__li {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.checkboxOff {
+    width: 16px;
+}

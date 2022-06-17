@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Rubik:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <header>
+        <h1>to-do list</h1>
+    </header>
+    <main>
+        <div class="input__div">
+            <form class="form" action="/input" method="POST">
+                <input type="text" name="input" id="input">
+                <button class="btn__add" type="submit" >Add</button>
+            </form>
+            <button class="btn__clear" onclick="clearList()">Clear</button>
+        </div>
+        <hr class="separator">
+
+        <div class="taskList">
+            <ul class="taskList__ul">
+                <% if(taskList.length === 0) { %>
+                    <p>No tasks added.</p>
+                <% } else { %>
+                <% for(let i=0; i < taskList.length; i++) { %>
+                    <li class="taskList__li"> 
+                        <img src="/images/Checkbox - Off.svg" class="checkboxOff">
+                        <img src="/images/delete.svg" alt="">
+                        <%= taskList[i] %> 
+                    </li>
+                <% } %>
+            <% } %>
+            </ul>
+        </div>
+    </main>
+    <script src="home.js"></script>
+</body>
+
+</html>
